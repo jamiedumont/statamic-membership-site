@@ -1,0 +1,46 @@
+<div class="mt-4 text-center">
+
+  <h1 class="m-0 p-3 text-blue-darker">Members area</h1>
+  <h2 class="mt-0 mb-2 text-base uppercase tracking-wide text-grey">Login</h2>
+
+  <div class="max-w-sm mx-auto p-4">
+
+  <!-- Login form starts. If successful, redirect to protected content we'll be creating later.
+  The "allow_request_redirect" uses any redirection URLs appended to the login URL
+  if the user tried to access protected content without first being logged in -->
+  {{ user:login_form redirect="/private-content" allow_request_redirect }}
+
+      <fieldset class="text-left">
+
+        <div>
+          <label class="block text-xs mb-1" for="email">Email Address</label>
+          <input class="p-3 input-reset border border-grey rounded w-full" type="text" name="username" value="{{ old:username }}" />
+        </div>
+
+        <div class="my-3">
+          <label class="block text-xs mb-1" for="password">Password</label>
+          <input class="p-3 input-reset border border-grey rounded w-full" type="password" name="password" value="{{ old:password }}" />
+        </div>
+
+      </fieldset>
+
+      <button class="block w-full mx-auto border-none mt-4 text-lg p-3 bg-blue rounded text-white cursor-pointer">Login</button>
+
+    <!-- check for errors in the form submission -->
+    {{ if errors }}
+        <div class="max-w-sm mx-auto text-center p-3 my-4 rounded bg-red-dark text-white">
+            <!-- loop over those errors -->
+            {{ errors }}
+                <!-- outputting the value of each, comes from Statamic's internals -->
+                <div class="text-xs mb-1">- {{ value }}</div>
+            {{ /errors }}
+        </div>
+    {{ /if }}
+
+    <!-- end the login form -->
+    {{ /user:login_form }}
+
+    <a class="block w-full text-blue-darker font-medium my-4 text-center" href="/registration">Not got an account? Register now.</a>
+
+    </div>
+</div>

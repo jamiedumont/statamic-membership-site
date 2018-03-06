@@ -1,0 +1,11 @@
+first_name: Jamie
+last_name: Dumont
+password_hash: $2y$10$GH2GNJAto088ath98J7yzuFY0cN2h6.7TbgTAv6QrnsH07AsfVV8O
+customer_id: cus_CRZstZ0CyDLWSj
+created_on: 1520346352
+plan: demo_membership
+subscription_id: sub_CRZtE3QSBFrLcw
+subscription_start: 1520346351
+subscription_end: 1523024751
+subscription_status: active
+id: 48fced46-fa3f-4124-80af-cdd70f886317
